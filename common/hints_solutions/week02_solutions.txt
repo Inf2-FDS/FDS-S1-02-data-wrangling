@@ -1,0 +1,59 @@
+###week02_ex1
+life_expectancy_loc = os.path.join(os.getcwd(), 'datasets', 'life_expectancy.csv')
+life_expectancy = pd.read_csv(life_expectancy_loc)
+life_expectancy.head()
+###week02_ex1_end
+
+###week02_ex2
+life_expectancy[life_expectancy['Country'] == 'Zimbabwe']
+###week02_ex2_end
+
+###week02_ex3
+total_expenditure = life_expectancy['Total expenditure']
+print(type(total_expenditure))
+print("Mean: "+ str(total_expenditure.mean()))
+print("std: " + str(total_expenditure.std()))
+print("Min: " + str(total_expenditure.min()))
+print("Max: " + str(total_expenditure.max()))
+print("25 quantile: " + str(total_expenditure.quantile(0.25)))
+print("Median: " + str(total_expenditure.median()))
+print("75 quantile: "+ str(total_expenditure.quantile(0.75)))
+###week02_ex3_end
+
+###week02_ex4
+threshold = int(0.8* len(life_expectancy))
+cleaned_life_expectancy = life_expectancy.dropna(axis=1, thresh=threshold)
+cleaned_life_expectancy
+###week02_ex4_end
+
+###week02_ex5
+developed = life_expectancy[life_expectancy['Status']=='Developed']
+developing = life_expectancy[life_expectancy['Status']=='Developing']
+print(developing['Life expectancy'].mean(), developed['Life expectancy'].mean())
+###week02_ex5_end
+
+###week02_ex5.1
+print(developed['Life expectancy'].std(), developing['Life expectancy'].std())
+###week02_ex5.1_end
+
+###week02_ex6
+# You should use keep=False to mark all duplicates as True
+print(life_expectancy[life_expectancy.duplicated(subset=['Country', 'Life expectancy'], keep=False)])
+print(pd.unique(life_expectancy[life_expectancy.duplicated(subset=['Country', 'Life expectancy'], keep=False)]['Country']))
+cleaned_life_expectancy = life_expectancy[~life_expectancy.duplicated(subset=['Country'])]
+cleaned_life_expectancy.head()
+###week02_ex6_end
+
+###week02_ex6.1
+Schooling, Income composition of resources, and adult mortality have the clearest correlation. However, BMI, health expenditure, and HIV also have a correlation with outliers.
+###week02_ex6.1_end
+
+###week02_ex7
+final_life_expectancy = pd.merge(cleaned_life_expectancy, drinks_by_country, on='Country', how='inner')
+final_life_expectancy
+###week02_ex7_end
+
+###week02_ex7.1
+pd.set_option('display.max_columns', None) # Helps you to see all columns
+print(final_life_expectancy.sort_values(by='Life expectancy', ascending=False).iloc[-3:])
+###week02_ex7.1_end
