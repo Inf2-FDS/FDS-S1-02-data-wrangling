@@ -1,0 +1,77 @@
+{
+    "1": {
+        "typeCode": true,
+        "solution": "###week02_ex1",
+        "hints": {
+            "hint 1": "Recall the function `pd.read_csv(..)`",
+            "hint 2": "Recall the function to display the first few entries `df.head()`"
+        }
+    },
+    "2": {
+        "typeCode": true,
+        "solution": "###week02_ex2",
+        "hints": {
+            "hint 1": "Could you do something similar to `people_df[people_df['Name'] == 'Mark']`"
+        }
+    },
+    "3": {
+        "typeCode": true,
+        "solution": "###week02_ex3",
+        "hints": {
+            "hint 1": "To calculate the mean, you would do: `total_expenditure.mean()` - what would it be for median, standard deviation, minimum, maximum, and the upper and lower quartiles?"
+        }
+    },
+    "4": {
+        "typeCode": true,
+        "solution": "###week02_ex4",
+        "hints": {
+            "hint 1": "The 'threshold' should be 80% of the length of the dataframe"
+        }
+    },
+    "5": {
+        "typeCode": true,
+        "solution": "###week02_ex5",
+        "hints": {
+            "hint 1": "To split the dataset, simply create new variables, filtering for the corresponding country status",
+            "hint 2": "Recall how we computed the mean in the earlier exercises `df.mean()`"
+        }
+    },
+    "5.1": {
+        "typeCode": true,
+        "solution": "###week02_ex5.1",
+        "hints": {
+            "Is there a difference?": "You might have expected that developing countries would have a shorter life expectancy, than developed countries. However, you might also have anticipated a greater difference.",
+            "What metric could help?": "Maybe the spread of life expectancy in the developing countries is much greater than developed ones and would explain, why even though we would expect much shorter life expectancy, the mean does not show it. We should compute the variance."
+        }
+    },
+    "6": {
+        "typeCode": true,
+        "solution": "###week02_ex6",
+        "hints": {
+            "Hint 1 (bullet #1)": "Think about the keep parameter",
+            "Hint 2 (bullet #2)": "Think about using `pd.unique`",
+            "Hint 3": "To negate a condition in Pandas, use the tilde `~` operator instead of `not`, e.g.: if `people` is a DataFrame with a column `adult` of boolean values: `child = people[~people['adult']]`.",
+            "Hint 4": "Can you utilise `~life_expectancy.duplicated(subset=['Country'])` ?"
+        }
+    },
+    "6.1": {
+        "typeCode": false,
+        "solution": "###week02_ex6.1",
+        "hints": {}
+    },
+    "7": {
+        "typeCode": true,
+        "solution": "###week02_ex7",
+        "hints": {
+            "hint 1": "Take a look at this cheatsheet for help: https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf"
+        }
+    },
+    "7.1": {
+        "typeCode": true,
+        "solution": "###week02_ex7.1",
+        "hints": {
+            "Which 3 countries?": "The three countries are Central African Republic, Angola, and Sierra Leone",
+            "Life expectancy factors": "It seems like the immunization against Hepatitis B is quite low (47%) in the Central African Republic, the Mean BMI of each country is within the norm (compared to most rich countries, which are generally overweight), which suggests that many people in those three countries are underweight. This is also shown in the thinness column showing that 8% of children are underweight. In the Central African Republic and in Angola, the immunization against Polio is very low, as well as against Diphtheria."
+        }
+    }
+}
