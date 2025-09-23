@@ -25,7 +25,7 @@ print("Developed life expectancy:  %2.1f years"%(developed["Life expectancy"].me
 ###week02_ex3_end
 
 ###week02_ex3.1
-Both values are in the 70s, which seems like reasonable numbers for human life expectancy. The life expectancy is greater in developed countries than developing ones. This relationship seems reasonable, since developing countries tend to be richer and have better health care systems than developing ones.
+Both life expectancies are between 65 and 80, which seems a reasonable range for human life expectancy. The life expectancy is greater in developed countries than developing ones. This relationship seems reasonable, since developing countries tend to be richer and have better health care systems than developing ones.
 ###week02_ex3.1_end
 
 ###week02_ex4
