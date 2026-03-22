@@ -29,7 +29,9 @@ cleaned_life_expectancy
 ###week02_ex5
 developed = life_expectancy[life_expectancy['Status']=='Developed']
 developing = life_expectancy[life_expectancy['Status']=='Developing']
-print(developing['Life expectancy'].mean(), developed['Life expectancy'].mean())
+# One way of printing to 1 decimal place - it's also good to label output, along with units
+print("Developing life expectancy: %2.1f years"%(developing['Life expectancy'].mean()))
+print("Developed life expectancy:  %2.1f years"%(developed['Life expectancy'].mean()))
 ###week02_ex5_end
 
 ###week02_ex5.1
